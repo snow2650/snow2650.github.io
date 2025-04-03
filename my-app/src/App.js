@@ -45,5 +45,5 @@ const App = () => {
     </Router>
   );
 };
-
+console.log('home page here')
 export default App;
