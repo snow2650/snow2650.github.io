@@ -15,7 +15,7 @@ const Home = () => {
       <div className="image-container"
       style={{ display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap' }}>
         <Link to="/Cars" className="image-link">
-          <img src="public/images/40.jpg" alt="Page 1" />
+          <img src="/images/40.jpg" alt="Page 1" />
         </Link>
         <Link to="/Games" className="image-link">
           <img src="/images/pic2.jpg" alt="Page 2" />
