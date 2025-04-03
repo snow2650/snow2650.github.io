@@ -1,4 +1,4 @@
-<!--# 🌟 Esther Hsueh – Software Developer & Data Enthusiast  -->
+<!--# 🌟 Esther Hsueh – Software Developer & Data Enthusiast  
 
 👋 Hi there! I'm **Esther Hsueh**, a software developer with a passion for building efficient, data-driven solutions. My background in **computer science** and **business operations** allows me to bridge the gap between technology and real-world applications.  
 
@@ -22,4 +22,4 @@
 
 ---
 
-⭐ _Always open to exciting projects and collaborations! Let’s build something amazing together._  
+⭐ _Always open to exciting projects and collaborations! Let’s build something amazing together._  -->
