@@ -5,14 +5,15 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 100px;
-    margin-top: 300px;
-  }
+    margin-top: 150px;
+    }
   
   /* Style the images */
   .image-link img {
-    width: 300px;
-    height: 200px;
-    border-radius: 30px;
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 25px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
