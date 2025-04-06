@@ -4,6 +4,8 @@ import Home from './Pages/Home.js';
 import Cars from './Pages/Cars';
 import Games from './Pages/Games';
 import Projects from './Pages/Projects';
+import Diary from './Pages/Diary';
+import AboutMe from './Pages/AboutMe';
 
 const App = () => {
   return (
@@ -13,7 +15,8 @@ const App = () => {
         <Route path="/Cars" element={<Cars />} />
         <Route path="/Games" element={<Games />} />
         <Route path="/Projects" element={<Projects />} />
-        
+        <Route path="/Diary" element={<Diary />} />
+        <Route path="/AboutMe" element={<AboutMe />} />
       </Routes>
     </Router>
   );

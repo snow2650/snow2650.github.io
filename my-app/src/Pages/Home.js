@@ -11,7 +11,10 @@ const Home = () => {
       </p>
 
       <p style={{ margin: '10px 0', fontSize: '19px', color: '#555' }}>
+        
+        <Link to="/AboutMe" >
         ABOUT Me.
+        </Link>
       </p>
       
       <div className="image-container"
