@@ -5,7 +5,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 100px;
-    margin-top: 150px;
+    margin-top: 90px;
     }
   
   /* Style the images */
@@ -33,5 +33,9 @@
     50% { transform: translateX(-2px) translateY(-2px); }
     75% { transform: translateX(1px) translateY(1px); }
     100% { transform: translateX(0) translateY(0); }
+  }
+  
+  .vibrate-button {
+    animation: vibrate 0.3s linear infinite;
   }
   

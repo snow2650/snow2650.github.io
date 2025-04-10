@@ -10,11 +10,25 @@ const Home = () => {
         Explore the different sections of this website by clicking on the images below.
       </p>
 
-      <p style={{ margin: '10px 0', fontSize: '19px', color: '#555' }}>
+      <p className="image-container" style={{ margin: '10px 0', fontSize: '19px', color: '#555' }}>
         
-        <Link to="/AboutMe" >
-        ABOUT Me.
-        </Link>
+      <Link to="/AboutMe" className="about-link"
+        style={{
+          padding: '10px 20px',
+          background: 'linear-gradient(45deg, #FF6B6B, #4ECDC4)',
+          borderRadius: '25px',
+          color: 'white',
+          textDecoration: 'none',
+          // transition: 'transform 0.2s',
+          display: 'inline-block',
+          '&:hover': {
+            animation: 'vibrate 0.3s linear infinite'}
+          }}
+          onMouseEnter={(e) => e.target.classList.add('vibrate-button')}
+          onMouseLeave={(e) => e.target.classList.remove('vibrate-button')}
+          >
+            🌟 Get to Know Me 🌟
+      </Link>      
       </p>
       
       <div className="image-container"
