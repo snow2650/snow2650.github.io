@@ -5,13 +5,13 @@ Modal.setAppElement('#root');
 
 const AboutMe = () => {
   const [selectedSection, setSelectedSection] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //const [isModalOpen, setIsModalOpen] = useState(false);
 
   // debugging
-  useEffect(() => {
-    console.log('AboutMe component mounted');
-    console.log('Selected Section:', selectedSection);
-  }, [selectedSection]);
+  // useEffect(() => {
+  //   console.log('AboutMe component mounted');
+  //   console.log('Selected Section:', selectedSection);
+  // }, [selectedSection]);
 
   const aboutSections = [
     {
@@ -19,94 +19,112 @@ const AboutMe = () => {
       title: 'Background',
       icon: '🌍',
       color: 'bg-blue-500',
-      hoverColor: 'hover:bg-blue-600',
+      //hoverColor: 'hover:bg-blue-600',
       content: 'I am a passionate individual with a diverse background in technology and creative pursuits.'
     },
     {
       id: 'skills',
       title: 'Skills',
       icon: '💻',
-      color: 'bg-green-500',
-      hoverColor: 'hover:bg-green-600',
+      //color: 'bg-green-500',
+      //hoverColor: 'hover:bg-green-600',
       content: 'Proficient in web development, programming, and design with extensive experience in modern technologies.'
     },
     {
       id: 'hobbies',
       title: 'Hobbies',
       icon: '🎨',
-      color: 'bg-purple-500',
-      hoverColor: 'hover:bg-purple-600',
+      //color: 'bg-purple-500',
+      //hoverColor: 'hover:bg-purple-600',
       content: 'I enjoy exploring new technologies, photography, and continuous learning.'
     },
     {
       id: 'goals',
       title: 'Goals',
       icon: '🚀',
-      color: 'bg-red-500',
-      hoverColor: 'hover:bg-red-600',
+      //color: 'bg-red-500',
+      //hoverColor: 'hover:bg-red-600',
       content: 'Committed to personal growth and creating innovative solutions that make a difference.'
     }
   ];
 
-  const closeModal = () => {
-    console.log('Closing modal');
-    setSelectedSection(null);
-    setIsModalOpen(false);
+  // const closeModal = () => {
+  //   console.log('Closing modal');
+  //   setSelectedSection(null);
+  //   setIsModalOpen(false);
+  // };
+  const sectionStyle = {
+    padding: '30px',
+    width: '200px',
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    backgroundColor: '#4299e1', // Actual blue color instead of 'bg-blue'
+    textAlign: 'center',
+    transition: 'transform 0.3s ease',
+    color: 'white', // Added for better contrast on blue background
+  };
+
+  const modalStyle = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      padding: '30px',
+      maxWidth: '500px',
+    },
   };
  
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+    <div >
+      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>About Me</h1>
       
-      <div className="relative w-[400px] h-[400px] mx-auto">
-        {aboutSections.map((section, index) => {
-          // Calculate position around a circle
-          const angle = (index / aboutSections.length) * 360;
-          const radius = 180;
-          
-          return (
-            <div 
-              key={section.id}
-              className={`absolute w-32 h-32 rounded-full flex flex-col items-center justify-center 
-                ${section.color} ${section.hoverColor} 
-                transform transition-all duration-300 ease-in-out cursor-pointer
-                hover:scale-110 shadow-lg`}
-              style={{
-                top: `calc(50% + ${radius * Math.sin(angle * Math.PI / 180)}px)`,
-                left: `calc(50% + ${radius * Math.cos(angle * Math.PI / 180)}px)`,
-                transform: 'translate(-50%, -50%)'
-              }}
-              onClick={() => setSelectedSection(section)}
-            >
-              <span className="text-3xl mb-2">{section.icon}</span>
-              <span className="text-white font-semibold">{section.title}</span>
-            </div>
-          );
-        })}
+      <div >
+        {aboutSections.map((section) => (
+          <div
+            key={section.id}
+            style={sectionStyle}
+            onClick={() => setSelectedSection(section)}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <div style={{ fontSize: '2em', marginBottom: '10px' }}>{section.icon}</div>
+            <h2>{section.title}</h2>
+          </div>
+        ))}
       </div>
 
       <Modal
         isOpen={!!selectedSection}
         onRequestClose={() => setSelectedSection(null)}
-        className="fixed inset-0 flex items-center justify-center"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
+        style={modalStyle}
       >
         {selectedSection && (
-          <div className={`${selectedSection.color} p-8 rounded-xl max-w-md w-full mx-4 text-center relative`}>
+          <div>
+            <h2>{selectedSection.title}</h2>
+            <p>{selectedSection.content}</p>
             <button 
-              onClick={() => setSelectedSection(null)} 
-              className="absolute top-4 right-4 text-white hover:text-gray-200"
+              onClick={() => setSelectedSection(null)}
+              style={{
+                marginTop: '20px',
+                padding: '10px 20px',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: 'pointer',
+              }}
             >
-              ✕
+              Close
             </button>
-            <h2 className="text-2xl font-bold text-white mb-4">{selectedSection.title}</h2>
-            <div className="text-3xl mb-4">{selectedSection.icon}</div>
-            <p className="text-white text-lg">{selectedSection.content}</p>
           </div>
         )}
       </Modal>
     </div>
   );
 };
-console.log('about me run 2')
+
 export default AboutMe;
