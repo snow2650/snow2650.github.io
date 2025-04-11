@@ -1,21 +1,25 @@
 {
   "name": "my-app",
-  "homepage": "https://snow2650.github.io/snow2650.github.io",
+  "homepage": "https://snow2650.github.io",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snow2650/snow2650.github.io.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.x.x",
+    "postcss": "^8.x.x",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-modal": "^3.16.3",
     "react-router-dom": "^7.5.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4",
     "tailwindcss": "^3.x.x",
-    "postcss": "^8.x.x",
-    "autoprefixer": "^10.x.x"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -47,6 +51,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.3"
   }
