@@ -79,10 +79,17 @@ const AboutMe = () => {
   };
  
   return (
-    <div >
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>About Me</h1>
       
-      <div >
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '20px',
+        flexWrap: 'wrap',
+        maxWidth: '1200px',
+        padding: '0 20px'
+      }}>
         {aboutSections.map((section) => (
           <div
             key={section.id}
