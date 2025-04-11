@@ -157,7 +157,7 @@ const AboutMe = () => {
         onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3182ce'}
         onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4299e1'}
       >
-        Back
+        Back to Home
       </button>
     </div>
   );

@@ -9,19 +9,19 @@ const Games = () => {
     {
       id: 1,
       title: "Ray Tracing",
-      image: "/images/raytracing.jpg",
+      image: "/images/raytracing.png",
       review: "Advanced rendering technique that simulates realistic lighting, shadows, and reflections in real-time. Revolutionizing visual fidelity in modern games."
     },
     {
       id: 2, 
       title: "DLSS/FSR",
-      image: "/images/dlss.jpg",
+      image: "/images/dlss.png",
       review: "AI-powered upscaling technologies that boost performance while maintaining image quality. NVIDIA's DLSS and AMD's FSR are leading the way."
     },
     {
       id: 3,
       title: "VR Technology", 
-      image: "/images/vr.jpg",
+      image: "/images/vr.png",
       review: "Immersive virtual reality systems with advanced motion tracking and haptic feedback, creating unprecedented gaming experiences."
     },
     {
