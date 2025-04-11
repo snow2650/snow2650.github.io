@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
+import { useNavigate } from 'react-router-dom';
 
 Modal.setAppElement('#root');
 
 const AboutMe = () => {
+  const navigate = useNavigate();
   const [selectedSection, setSelectedSection] = useState(null);
   //const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -79,14 +81,22 @@ const AboutMe = () => {
   };
  
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '20px' }}>About Me</h1>
+    <div style={{ 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center',
+      minHeight: '100vh',
+      padding: '40px 0'
+    }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '40px' }}>About Me</h1>
       
       <div style={{ 
         display: 'flex', 
         justifyContent: 'center', 
-        gap: '20px',
+        alignItems: 'center',
+        gap: '30px',
         flexWrap: 'wrap',
+        width: '100%',
         maxWidth: '1200px',
         padding: '0 20px'
       }}>
@@ -130,6 +140,25 @@ const AboutMe = () => {
           </div>
         )}
       </Modal>
+      <button 
+        onClick={() => navigate(-1)}
+        style={{
+          marginTop: '40px',
+          padding: '10px 30px',
+          backgroundColor: '#4299e1',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          transition: 'background-color 0.3s ease'
+        }}
+        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3182ce'}
+        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4299e1'}
+      >
+        Back
+      </button>
     </div>
   );
 };

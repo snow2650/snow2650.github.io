@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Games.css';
 
 const Games = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -6,27 +8,39 @@ const Games = () => {
   const games = [
     {
       id: 1,
-      title: "Unity",
-      image: "/images/unity.jpg",
-      review: "Excellent game engine for both 2D and 3D development. Great community support and asset store."
+      title: "Ray Tracing",
+      image: "/images/raytracing.jpg",
+      review: "Advanced rendering technique that simulates realistic lighting, shadows, and reflections in real-time. Revolutionizing visual fidelity in modern games."
     },
     {
       id: 2, 
-      title: "Unreal Engine",
-      image: "/images/unreal.jpg",
-      review: "Powerful engine with stunning graphics capabilities. Best suited for high-end 3D games."
+      title: "DLSS/FSR",
+      image: "/images/dlss.jpg",
+      review: "AI-powered upscaling technologies that boost performance while maintaining image quality. NVIDIA's DLSS and AMD's FSR are leading the way."
     },
     {
       id: 3,
-      title: "Godot",
-      image: "/images/godot.jpg", 
-      review: "Open-source engine with growing community. Great for 2D games and indie developers."
+      title: "VR Technology", 
+      image: "/images/vr.jpg",
+      review: "Immersive virtual reality systems with advanced motion tracking and haptic feedback, creating unprecedented gaming experiences."
     },
     {
       id: 4,
-      title: "GameMaker",
-      image: "/images/gamemaker.jpg",
-      review: "User-friendly engine perfect for 2D game development. Ideal for beginners."
+      title: "Cloud Gaming",
+      image: "/images/cloudgaming.jpg",
+      review: "Streaming technology that allows high-end gaming on any device. Services like GeForce Now and Xbox Cloud Gaming are making gaming more accessible."
+    },
+    {
+      id: 5,
+      title: "Haptic Feedback",
+      image: "/images/haptic.jpg",
+      review: "Advanced controller technology that provides realistic tactile feedback, enhancing immersion through precise vibrations and resistance."
+    },
+    {
+      id: 6,
+      title: "AI in Gaming",
+      image: "/images/ai.jpg",
+      review: "Machine learning applications in gaming, from intelligent NPCs to procedural content generation, creating more dynamic and responsive game worlds."
     }
   ];
 
@@ -35,47 +49,27 @@ const Games = () => {
   };
 
   return (
-    <div style={{ padding: '20px' }}>
-      <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Game Development Technologies</h1>
+    <div className="games-container">
+      <Link to="/" className="back-to-home">
+        Back to Home
+      </Link>
+      <h1 className="games-header">Gaming Technology</h1>
+      <p className="subtitle">Exploring the cutting-edge technologies shaping the future of gaming</p>
       
-      <div style={{ 
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: '20px',
-        padding: '20px'
-      }}>
+      <div className="games-grid">
         {games.map((game) => (
           <div
             key={game.id}
             onClick={() => handleCardClick(game.id)}
-            style={{
-              cursor: 'pointer',
-              padding: '15px',
-              borderRadius: '10px',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-              transform: selectedCard === game.id ? 'scale(1.05)' : 'scale(1)',
-              transition: 'all 0.3s ease',
-              filter: selectedCard && selectedCard !== game.id ? 'grayscale(80%)' : 'none',
-              backgroundColor: 'white',
-            }}
+            className={`game-card ${selectedCard === game.id ? 'selected' : ''} ${selectedCard && selectedCard !== game.id ? 'blurred' : ''}`}
           >
             <img
               src={game.image}
               alt={game.title}
-              style={{
-                width: '100%',
-                height: '200px',
-                objectFit: 'cover',
-                borderRadius: '8px',
-                marginBottom: '10px'
-              }}
+              className="game-image"
             />
-            <h3 style={{ margin: '10px 0' }}>{game.title}</h3>
-            <p style={{ 
-              fontSize: '14px',
-              color: '#666',
-              lineHeight: '1.4'
-            }}>
+            <h3 className="game-title">{game.title}</h3>
+            <p className="game-review">
               {game.review}
             </p>
           </div>
