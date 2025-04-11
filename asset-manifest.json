@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/snow2650.github.io/static/css/main.40cebd1e.css",
-    "main.js": "/snow2650.github.io/static/js/main.72b005bb.js",
+    "main.css": "/snow2650.github.io/static/css/main.760da035.css",
+    "main.js": "/snow2650.github.io/static/js/main.198b5e79.js",
     "static/js/453.ed3810f9.chunk.js": "/snow2650.github.io/static/js/453.ed3810f9.chunk.js",
     "index.html": "/snow2650.github.io/index.html",
-    "main.40cebd1e.css.map": "/snow2650.github.io/static/css/main.40cebd1e.css.map",
-    "main.72b005bb.js.map": "/snow2650.github.io/static/js/main.72b005bb.js.map",
+    "main.760da035.css.map": "/snow2650.github.io/static/css/main.760da035.css.map",
+    "main.198b5e79.js.map": "/snow2650.github.io/static/js/main.198b5e79.js.map",
     "453.ed3810f9.chunk.js.map": "/snow2650.github.io/static/js/453.ed3810f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40cebd1e.css",
-    "static/js/main.72b005bb.js"
+    "static/css/main.760da035.css",
+    "static/js/main.198b5e79.js"
   ]
 }
