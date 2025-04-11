@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
+  const handleImageError = (e) => {
+    e.target.style.display = 'none';
+    e.target.parentElement.style.backgroundColor = '#f5f5f5';
+    e.target.parentElement.style.display = 'flex';
+    e.target.parentElement.style.alignItems = 'center';
+    e.target.parentElement.style.justifyContent = 'center';
+    e.target.parentElement.innerHTML = `<div style="text-align: center; padding: 20px;">
+      <p style="color: #999;">Image not available</p>
+    </div>`;
+  };
+
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>
       <h1>Welcome to My Playground</h1>
@@ -22,7 +33,7 @@ const Home = () => {
           // transition: 'transform 0.2s',
           display: 'inline-block',
           '&:hover': {
-            animation: 'vibrate 0.3s linear infinite'}
+            animation: 'vibrate 0.4s linear infinite'}
           }}
           onMouseEnter={(e) => e.target.classList.add('vibrate-button')}
           onMouseLeave={(e) => e.target.classList.remove('vibrate-button')}
@@ -32,9 +43,13 @@ const Home = () => {
       </p>
       
       <div className="image-container"
-      style={{ display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap' }}>
+        style={{ display: 'flex', justifyContent: 'center', gap: '50px', flexWrap: 'wrap' }}>
         <Link to="/Cars" className="image-link">
-          <img src="/images/40.jpg" alt="Cars" />
+          <img 
+            src={process.env.PUBLIC_URL + "/images/40.jpg"} 
+            alt="Cars" 
+            onError={handleImageError}
+          />
         </Link>
         <Link to="/Games" className="image-link">
           <img src="/images/52.jpg" alt="Games" />
@@ -45,10 +60,8 @@ const Home = () => {
         <Link to="/Diary" className="image-link">
           <img src="/images/46.jpg" alt="Diary" />
         </Link>
-       
       </div>
     </div>
-    
   );
 };
 
