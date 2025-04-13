@@ -27,19 +27,19 @@ const Games = () => {
     {
       id: 4,
       title: "Cloud Gaming",
-      image: "/images/cloudgaming.jpg",
+      image: "/images/cloudgaming.png",
       review: "Streaming technology that allows high-end gaming on any device. Services like GeForce Now and Xbox Cloud Gaming are making gaming more accessible."
     },
     {
       id: 5,
       title: "Haptic Feedback",
-      image: "/images/haptic.jpg",
+      image: "/images/haptic.png",
       review: "Advanced controller technology that provides realistic tactile feedback, enhancing immersion through precise vibrations and resistance."
     },
     {
       id: 6,
       title: "AI in Gaming",
-      image: "/images/ai.jpg",
+      image: "/images/ai.png",
       review: "Machine learning applications in gaming, from intelligent NPCs to procedural content generation, creating more dynamic and responsive game worlds."
     }
   ];
