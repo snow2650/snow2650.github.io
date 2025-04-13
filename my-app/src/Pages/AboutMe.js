@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Modal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,7 +8,6 @@ const AboutMe = () => {
   const navigate = useNavigate();
   const [selectedSection, setSelectedSection] = useState(null);
   //const [isModalOpen, setIsModalOpen] = useState(false);
-
   // debugging
   // useEffect(() => {
   //   console.log('AboutMe component mounted');
