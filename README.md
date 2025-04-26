@@ -18,7 +18,8 @@
 ## 📬 Connect with Me  
 🌐 **Website:** [snow2650.github.io](https://snow2650.github.io)  
 💼 **LinkedIn:** [Esther Hsueh](https://www.linkedin.com/in/esther-fangwei-hsueh/)  
-📧 **Email:** eve.hsueh2606@gmail.com  
+📧 **Email:** eve.hsueh2606@gmail.com
+📧 **Discord:** comefromparil  
 
 ---
 
